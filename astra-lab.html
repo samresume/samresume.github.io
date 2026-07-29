@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="ASTRA Lab — Advanced Systems for Temporal, Multimodal, and Space Research. Led by MohammadReza (Sam) EskandariNasab at Utah State University." />
+<meta name="theme-color" content="#f6fbff" />
+<title>ASTRA Lab | Sam EskandariNasab</title>
+<link rel="icon" type="image/png" href="assets/se_logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="astra-lab.css" />
+</head>
+<body>
+
+  <div class="grain"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="nav" id="siteNav">
+    <a class="nav-brand" href="index.html#top">
+      <img src="assets/se_logo.png" alt="" aria-hidden="true" />
+      <span>Sam EskandariNasab</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#top">Main Site</a>
+      <a href="#research-areas" data-nav>Research Areas</a>
+      <a href="#people" data-nav>People</a>
+      <a href="#grants" data-nav>Grants</a>
+      <a href="#lab-publications" data-nav>Publications</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#code-datasets" data-nav>Code &amp; Datasets</a>
+      <a class="nav-cta" href="index.html#contact">Get in Touch</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ LAB HERO ============ -->
+    <section class="lab-hero">
+      <div class="hero-blobs" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+      </div>
+      <div class="lab-hero-inner">
+        <div class="lab-logo-panel reveal">
+          <img class="lab-logo" src="assets/astra_lab.png" alt="ASTRA Lab logo" />
+        </div>
+        <div class="lab-hero-copy">
+          <p class="eyebrow reveal">Research group</p>
+          <h1 class="reveal">ASTRA <span class="accent">Lab</span></h1>
+          <p class="lead reveal">Advanced Systems for Temporal, Multimodal, and Space Research.</p>
+          <p class="reveal">
+            ASTRA Lab develops artificial intelligence systems for temporal data, multimodal learning, scientific
+            data generation, and space-weather prediction — led by MohammadReza (Sam) EskandariNasab at Utah
+            State University.
+          </p>
+          <div class="lab-hero-actions reveal">
+            <a class="btn btn-primary" href="#people">
+              <span>Meet the lab</span>
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="index.html#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH AREAS ============ -->
+    <section id="research-areas" class="section">
+      <p class="eyebrow reveal">Research</p>
+      <h2 class="split-heading">Research Areas</h2>
+      <div class="tilt-grid">
+        <article class="tilt-card" data-tilt>
+          <div class="tilt-icon shape-a" aria-hidden="true"></div>
+          <h3>Generative Models</h3>
+          <p>Diffusion models, generative adversarial networks, adversarial autoencoders, and scientific data generation.</p>
+        </article>
+        <article class="tilt-card" data-tilt>
+          <div class="tilt-icon shape-b" aria-hidden="true"></div>
+          <h3>Multimodal Learning</h3>
+          <p>Generation and translation across images, text, vector data, and time-series data.</p>
+        </article>
+        <article class="tilt-card" data-tilt>
+          <div class="tilt-icon shape-c" aria-hidden="true"></div>
+          <h3>Space Weather Prediction</h3>
+          <p>Machine-learning systems for early prediction of solar flares, solar energetic particle events, and coronal mass ejections.</p>
+        </article>
+        <article class="tilt-card" data-tilt>
+          <div class="tilt-icon shape-d" aria-hidden="true"></div>
+          <h3>Time Series Analysis</h3>
+          <p>Temporal modeling, preprocessing, representation learning, and forecasting for scientific time-series data.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PEOPLE ============ -->
+    <section id="people" class="section people-section">
+      <p class="eyebrow reveal">People</p>
+      <h2 class="split-heading">People</h2>
+
+      <div class="people-group">
+        <h3>Principal Investigator</h3>
+        <div class="people-grid principal-grid">
+          <article class="person-card reveal">
+            <img src="gallery/sam_eskandarinasab_profile.jpg" alt="Sam EskandariNasab" />
+            <h4>Sam EskandariNasab</h4>
+            <p>Principal Investigator</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="people-group">
+        <h3>Current Students</h3>
+        <div class="people-grid">
+          <article class="person-card recruiting-card reveal">
+            <span class="avatar-placeholder" aria-hidden="true"></span>
+            <h4>Recruiting</h4>
+            <p>Ph.D. Student</p>
+          </article>
+          <article class="person-card recruiting-card reveal">
+            <span class="avatar-placeholder" aria-hidden="true"></span>
+            <h4>Recruiting</h4>
+            <p>Ph.D. Student</p>
+          </article>
+          <article class="person-card recruiting-card reveal">
+            <span class="avatar-placeholder" aria-hidden="true"></span>
+            <h4>Recruiting</h4>
+            <p>M.S. Student</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="people-group">
+        <h3>Past Students</h3>
+        <div class="empty-card reveal">Past student profiles will be added here.</div>
+      </div>
+    </section>
+
+    <!-- ============ GRANTS ============ -->
+    <section id="grants" class="section">
+      <p class="eyebrow reveal">Funding</p>
+      <h2 class="split-heading">Grants</h2>
+      <div class="empty-card reveal">Grant information will be added here.</div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section id="lab-publications" class="section">
+      <p class="eyebrow reveal">Scholarship</p>
+      <h2 class="split-heading">Publications</h2>
+      <div class="empty-card reveal">Lab publications will be added here.</div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <p class="eyebrow reveal">Research portfolio</p>
+      <h2 class="split-heading">Projects</h2>
+      <div class="empty-card reveal">Project summaries will be added here.</div>
+    </section>
+
+    <!-- ============ CODE & DATASETS ============ -->
+    <section id="code-datasets" class="section">
+      <p class="eyebrow reveal">Open science</p>
+      <h2 class="split-heading">Code and Datasets</h2>
+      <div class="empty-card reveal">Code repositories and datasets will be added here.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ASTRA Lab · Sam EskandariNasab</p>
+    <a href="index.html#top">Main site →</a>
+  </footer>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="index.js?v=2"></script>
+</body>
+</html>

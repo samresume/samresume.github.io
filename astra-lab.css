@@ -1,0 +1,88 @@
+/* ===================================================================
+   ASTRA Lab page — extends the shared design system in index.css
+   (colors, spacing, type, card recipe, motion tokens all reused as-is)
+   =================================================================== */
+
+/* =================== LAB HERO =================== */
+.lab-hero{
+  position:relative; overflow:hidden;
+  padding-top: calc(var(--nav-h) + var(--sp-8));
+  padding-bottom: var(--section-y);
+  background: var(--grad-hero);
+}
+.lab-hero .hero-blobs{ z-index:0; }
+.lab-hero-inner{
+  position:relative; z-index:3; max-width: var(--container); margin:0 auto; padding: 0 var(--section-x);
+  display:grid; grid-template-columns: .7fr 1.3fr; gap: var(--gap-lg); align-items:center;
+}
+.lab-logo-panel{
+  background: var(--glass-strong); border:1px solid var(--glass-border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg); padding: var(--sp-6); display:flex; align-items:center; justify-content:center;
+  backdrop-filter: blur(14px);
+}
+.lab-logo{ width:100%; max-width:220px; border-radius: var(--radius-md); }
+
+.lab-hero-copy h1{
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem); line-height:1.05; letter-spacing:-.01em; margin: var(--sp-2) 0 var(--sp-4);
+}
+.lab-hero-copy h1 .accent{
+  background: linear-gradient(135deg, #1f74b3 0%, #2f93d6 55%, #7cc3ec 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  text-shadow: 0 6px 22px rgba(20,80,140,0.16);
+}
+.lab-hero-copy .lead{ font-size: var(--text-md); font-weight:600; color: var(--ink); margin-bottom: var(--sp-4); max-width:56ch; }
+.lab-hero-copy p:not(.lead){
+  color: var(--ink-soft); max-width:62ch; margin-bottom: var(--sp-5);
+  text-align: justify; text-justify: inter-word;
+}
+.lab-hero-actions{ display:flex; gap: var(--sp-4); flex-wrap:wrap; }
+
+/* =================== PEOPLE =================== */
+.people-group{ margin-bottom: var(--sp-7); }
+.people-group:last-child{ margin-bottom:0; }
+.people-group h3{
+  font-size: var(--text-sm); margin-bottom: var(--sp-4); color: var(--ink-soft);
+  text-transform:uppercase; letter-spacing: var(--track-label); font-family: var(--font-body); font-weight:700;
+}
+.people-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+.principal-grid{ grid-template-columns: 260px; }
+
+.person-card{
+  background: var(--glass-strong); border:1px solid var(--glass-border); border-radius: var(--radius-md);
+  padding: var(--card-pad); text-align:center; box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-med) ease, box-shadow var(--dur-med) ease;
+}
+.person-card:hover{ transform: var(--lift); box-shadow: var(--shadow-md); }
+.person-card img{
+  width:120px; height:120px; border-radius:50%; object-fit:cover; object-position: top center;
+  margin: 0 auto var(--sp-4); box-shadow: var(--shadow-sm); border: 3px solid #fff;
+}
+.person-card h4{ font-size: var(--text-title); margin-bottom: var(--sp-1); }
+.person-card p{ font-size: var(--text-sm); color: var(--ink-soft); }
+
+.avatar-placeholder{
+  display:block; width:88px; height:88px; border-radius:50%; margin: 0 auto var(--sp-4);
+  background: var(--grad-cool); opacity:.5;
+}
+.recruiting-card{ border-style:dashed; border-color: rgba(31,116,179,0.28); background: var(--glass); }
+
+/* =================== EMPTY-STATE CARDS =================== */
+.empty-card{
+  background: var(--glass); border:1.5px dashed rgba(31,116,179,0.28); border-radius: var(--radius-md);
+  padding: var(--sp-7) var(--sp-6); text-align:center; color: var(--ink-faint);
+  font-size: var(--text-base); font-weight:600;
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 980px){
+  .lab-hero-inner{ grid-template-columns:1fr; text-align:center; }
+  .lab-logo-panel{ max-width:220px; margin:0 auto; }
+  .lab-hero-actions{ justify-content:center; }
+  .lab-hero-copy p:not(.lead){ text-align:left; }
+  .people-grid{ grid-template-columns: repeat(2,1fr); }
+  .principal-grid{ grid-template-columns: 260px; margin:0 auto; }
+}
+
+@media (max-width: 640px){
+  .people-grid{ grid-template-columns:1fr; }
+}
