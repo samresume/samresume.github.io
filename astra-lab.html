@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="index.css" />
-<link rel="stylesheet" href="astra-lab.css" />
+<link rel="stylesheet" href="index.css?v=15" />
+<link rel="stylesheet" href="astra-lab.css?v=6" />
 </head>
 <body>
 
@@ -72,30 +72,33 @@
     </section>
 
     <!-- ============ RESEARCH AREAS ============ -->
-    <section id="research-areas" class="section">
+    <section id="research-areas" class="section research-section">
       <p class="eyebrow reveal">Research</p>
       <h2 class="split-heading">Research Areas</h2>
-      <div class="tilt-grid">
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-a" aria-hidden="true"></div>
-          <h3>Generative Models</h3>
-          <p>Diffusion models, generative adversarial networks, adversarial autoencoders, and scientific data generation.</p>
-        </article>
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-b" aria-hidden="true"></div>
-          <h3>Multimodal Learning</h3>
-          <p>Generation and translation across images, text, vector data, and time-series data.</p>
-        </article>
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-c" aria-hidden="true"></div>
-          <h3>Space Weather Prediction</h3>
-          <p>Machine-learning systems for early prediction of solar flares, solar energetic particle events, and coronal mass ejections.</p>
-        </article>
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-d" aria-hidden="true"></div>
-          <h3>Time Series Analysis</h3>
-          <p>Temporal modeling, preprocessing, representation learning, and forecasting for scientific time-series data.</p>
-        </article>
+      <div class="research-columns">
+        <div class="research-card reveal">
+          <div class="research-card-head">
+            <span class="tilt-icon shape-a" aria-hidden="true"></span>
+            <h3>Pure Machine Learning</h3>
+          </div>
+          <ul>
+            <li>Generative Models (Time-Series Generation)</li>
+            <li>Multimodal Learning</li>
+            <li>Time Series Analysis (Ensemble Models, Contrastive Learning)</li>
+          </ul>
+        </div>
+        <div class="research-card reveal">
+          <div class="research-card-head">
+            <span class="tilt-icon shape-c" aria-hidden="true"></span>
+            <h3>Application of Machine Learning</h3>
+          </div>
+          <ul>
+            <li>Space Weather Analysis</li>
+            <li>Solar Flare Forecasting</li>
+            <li>Solar Energetic Particle Prediction</li>
+            <li>Biomedical Signal Processing</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -186,6 +189,6 @@
   </script>
   <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script type="module" src="index.js?v=2"></script>
+  <script type="module" src="index.js?v=4"></script>
 </body>
 </html>

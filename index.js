@@ -501,7 +501,7 @@ function initTimelineDraw() {
 }
 
 /* ============================================================
-   Gallery: pinned horizontal scroll driven by vertical scroll
+   Gallery: free native horizontal scroll (independent of page scroll)
    ============================================================ */
 function initGalleryScroll() {
   const section = $("#gallery");
@@ -522,32 +522,8 @@ function initGalleryScroll() {
     figures.forEach(f => f.classList.toggle("is-center", f === closest));
   }
 
-  if (!hasGSAP() || !window.ScrollTrigger) {
-    // Fallback: native horizontal scroll/drag
-    viewport.style.overflowX = "auto";
-    track.style.width = "max-content";
-    viewport.addEventListener("scroll", () => requestAnimationFrame(updateCenter), { passive: true });
-    window.addEventListener("resize", updateCenter);
-    updateCenter();
-    return;
-  }
-
-  const getMaxScroll = () => Math.max(0, track.scrollWidth - viewport.clientWidth);
-
-  const tween = gsap.to(track, { x: () => -getMaxScroll(), ease: "none" });
-
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top top+=84",
-    end: () => "+=" + (getMaxScroll() + window.innerHeight * 0.4),
-    pin: true,
-    scrub: 0.8,
-    anticipatePin: 1,
-    animation: tween,
-    invalidateOnRefresh: true,
-    onUpdate: updateCenter,
-  });
-
+  viewport.addEventListener("scroll", () => requestAnimationFrame(updateCenter), { passive: true });
+  window.addEventListener("resize", updateCenter);
   updateCenter();
 }
 
@@ -667,7 +643,7 @@ function initHeroScene() {
 
   // Ring — a glowing torus "halo"
   const ring = new THREE.Mesh(
-    new THREE.TorusGeometry(0.85, 0.26, 40, 120),
+    new THREE.TorusGeometry(0.5, 0.15, 40, 120),
     makeBlobMaterial({ colorA: "#7cc3ec", colorB: "#eaf6fd", rim: "#ffffff", amplitude: 0 })
   );
   ring.position.set(3.4, 1.3, -1.5);

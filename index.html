@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="index.css?v=15" />
 
 <meta property="og:type" content="profile" />
 <meta property="og:title" content="MohammadReza (Sam) EskandariNasab · PhD Candidate, Utah State University" />
@@ -71,13 +71,10 @@
     </button>
     <nav class="nav-links" id="navLinks">
       <a href="#about" data-nav>About</a>
-      <a href="#research" data-nav>Research</a>
       <a href="#experience" data-nav>Experience</a>
+      <a href="#education" data-nav>Education</a>
       <a href="#publications" data-nav>Publications</a>
-      <a href="#recognition" data-nav>Recognition</a>
-      <a href="#gallery" data-nav>Gallery</a>
       <a href="#contact" data-nav>Contact</a>
-      <a class="nav-cta" href="Sam-EskandariNasab-CV.pdf" download>Download CV</a>
     </nav>
   </header>
 
@@ -94,7 +91,7 @@
 
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow reveal">Tenure-track Assistant Professor applicant</p>
+          <p class="eyebrow reveal">Assistant Professor applicant</p>
           <h1 class="hero-title reveal">
             Hi, I'm<br />
             <span class="ink-swap-wrap" id="inkSwapWrap"><span class="ink-swap" data-swap='["Sam EskandariNasab.","MohammadReza EskandariNasab."]'>Sam EskandariNasab.</span></span>
@@ -102,15 +99,13 @@
           <p class="hero-lead reveal">
             I am MohammadReza EskandariNasab, also known as Sam, a name inspired by the legendary Persian hero
             featured in the <em>Shahnameh</em>. I am a fourth-year PhD candidate in Computer Science at Utah
-            State University, where I also earned my MSc in Computer Science in December 2024. I currently
-            serve as a Graduate Research Assistant and am actively seeking tenure-track Assistant Professor
-            positions. My research interests span machine learning, generative models, time-series analysis,
-            multimodal learning, and space weather prediction.
+            State University, where I also earned my MSc in Computer Science. I currently serve as a Graduate
+            Research Assistant and am actively seeking Assistant Professor positions.
           </p>
           <div class="hero-actions reveal">
             <a class="btn btn-primary" href="Sam-EskandariNasab-CV.pdf" download>
               <span>Download CV</span>
-              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 3v12m0 0 4.5-4.5M12 15 7.5 10.5M4 19h16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" width="15" height="15"><path d="M12 3v12m0 0 4.5-4.5M12 15 7.5 10.5M4 19h16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a class="btn btn-ghost" href="#contact">Get in touch</a>
           </div>
@@ -133,62 +128,21 @@
       <div class="scroll-cue" aria-hidden="true"><span></span>Scroll</div>
     </section>
 
-    <!-- ============ STATS STRIP ============ -->
-    <!-- ============ RESEARCH ============ -->
-    <section id="research" class="section">
-      <div class="tilt-grid">
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-a" aria-hidden="true"></div>
-          <h3>Generative Models</h3>
-          <p>Diffusion models, GANs, and adversarial autoencoders for structured temporal data.</p>
-        </article>
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-b" aria-hidden="true"></div>
-          <h3>Multimodal Learning</h3>
-          <p>Representations and generative mappings across heterogeneous scientific data sources.</p>
-        </article>
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-c" aria-hidden="true"></div>
-          <h3>Space Weather Prediction</h3>
-          <p>ML pipelines for solar-flare forecasting and robust space-weather observation analysis.</p>
-        </article>
-        <article class="tilt-card" data-tilt>
-          <div class="tilt-icon shape-d" aria-hidden="true"></div>
-          <h3>Time Series Analysis</h3>
-          <p>Representation learning, generation, classification, and domain adaptation for multivariate data.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="stats-strip">
-      <div class="stats-bar">
-        <div class="stat" data-count="172"><span class="stat-num">0</span><span class="stat-label">Citations</span></div>
-        <div class="stat" data-count="9"><span class="stat-num">0</span><span class="stat-label">Peer-Reviewed Publications</span></div>
-        <div class="stat" data-count="2"><span class="stat-num">0</span><span class="stat-label">NSF Projects</span></div>
-        <div class="stat" data-count="37"><span class="stat-num">0</span><span class="stat-label">Peer Reviews · 15 Venues</span></div>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
+    <!-- ============ ABOUT + RESEARCH INTERESTS ============ -->
     <section id="about" class="section about-section">
-      <div class="about-grid">
-        <div class="about-photo-parallax reveal">
-          <div class="about-photo-cutout" id="parallaxPhoto">
-            <img src="assets3d/main2-cutout.png" alt="MohammadReza (Sam) EskandariNasab standing for a portrait" />
-          </div>
-          <div class="about-photo-glow" aria-hidden="true"></div>
-        </div>
+      <p class="eyebrow reveal">Academic profile</p>
+      <h2 class="reveal">AI for scientific data generation <span class="accent">&amp; space-weather prediction</span></h2>
 
+      <div class="about-grid">
         <div class="about-copy">
-          <p class="eyebrow reveal">Academic profile</p>
-          <h2 class="reveal">AI for scientific data generation <span class="accent">&amp; space-weather prediction</span></h2>
           <p class="reveal">
-            I am MohammadReza EskandariNasab (Sam), a PhD candidate in Computer Science at Utah State University
-            in Logan, Utah. My research centers on generative modeling for time-series data, including diffusion
-            models, generative adversarial networks, and adversarial autoencoders, with publications at IEEE
-            ICDM, SIAM SDM, IEEE BigData, and IEEE ICMLA. My current work extends this research into multimodal
-            learning through an NSF-funded project (Award No. 2530946), generating and translating across
-            images, text, vector data, and time series through the proposed UNISON framework.
+            I am MohammadReza EskandariNasab (Sam), a PhD candidate in Computer Science at Utah State
+            University in Logan, Utah. My research centers on generative modeling for time-series data,
+            including diffusion models, generative adversarial networks, and adversarial autoencoders, with
+            publications at IEEE ICDM, SIAM SDM, IEEE BigData, and IEEE ICMLA. My current work extends this
+            research into multimodal learning through an NSF-funded project (Award No. 2530946), generating
+            and translating across images, text, vector data, and time series through the proposed UNISON
+            framework.
           </p>
           <p class="reveal">
             Alongside this, I build machine-learning pipelines that forecast solar flares, solar energetic
@@ -204,20 +158,35 @@
             systems, as I pursue a tenure-track Assistant Professor position in computer science.
           </p>
         </div>
-      </div>
-    </section>
 
-    <!-- ============ NEWS ============ -->
-    <section id="news" class="section news-section">
-      <p class="eyebrow reveal">Latest</p>
-      <h2 class="reveal">News</h2>
-      <div class="compact-list news-grid">
-        <article class="reveal"><time>2026</time><p>SoftwareX journal article on FlaPLeT published.</p></article>
-        <article class="reveal"><time>Nov 2025</time><p>Received IEEE ICDM Conference Travel Award; volunteered at IEEE ICDM 2025.</p></article>
-        <article class="reveal"><time>Jul 2025</time><p>Contributed to NSF Award #2530946 (CAIG Project) via the proposed UNISON model.</p></article>
-        <article class="reveal"><time>May 2025</time><p>Received SIAM SDM 2025 Student Travel Award; presented AVATAR.</p></article>
-        <article class="reveal"><time>Mar 2025</time><p>Completed PhD qualifying examination at Utah State University.</p></article>
-        <article class="reveal"><time>Dec 2024</time><p>Completed MSc in Computer Science; presented at IEEE BigData &amp; IEEE ICMLA.</p></article>
+        <aside class="research-aside" id="research">
+          <p class="aside-label reveal">Research interests</p>
+          <div class="research-stack">
+            <div class="research-card reveal">
+              <div class="research-card-head">
+                <span class="tilt-icon shape-a" aria-hidden="true"></span>
+                <h3>Pure Machine Learning</h3>
+              </div>
+              <ul>
+                <li>Generative Models (Time-Series Generation)</li>
+                <li>Multimodal Learning</li>
+                <li>Time Series Analysis (Ensemble Models, Contrastive Learning)</li>
+              </ul>
+            </div>
+            <div class="research-card reveal">
+              <div class="research-card-head">
+                <span class="tilt-icon shape-c" aria-hidden="true"></span>
+                <h3>Application of Machine Learning</h3>
+              </div>
+              <ul>
+                <li>Space Weather Analysis</li>
+                <li>Solar Flare Forecasting</li>
+                <li>Solar Energetic Particle Prediction</li>
+                <li>Biomedical Signal Processing</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -286,19 +255,21 @@
           <time>May 2023 – Expected Jul 2027</time>
           <h3>PhD in Computer Science</h3>
           <p>Utah State University · GPA 4.0/4.0</p>
-          <p>Dissertation proposal on denoising diffusion probabilistic models and multimodal learning. Supervisor: Dr. Shah Muhammad Hamdi.</p>
+          <p class="edu-detail"><strong>Dissertation:</strong><br />Proposal on denoising diffusion probabilistic models and multimodal learning.</p>
+          <p class="edu-supervisor">Supervisor: Dr. Shah Muhammad Hamdi.</p>
         </article>
         <article class="edu-card reveal">
           <time>May 2023 – Dec 2024</time>
           <h3>MSc in Computer Science</h3>
           <p>Utah State University · GPA 4.0/4.0</p>
-          <p><em>Supervised Generative Adversarial Networks for Time Series Generation in Embedding Space.</em> Supervisor: Dr. Shah Muhammad Hamdi.</p>
+          <p class="edu-detail"><strong>Thesis:</strong><br /><em>Supervised Generative Adversarial Networks for Time Series Generation in Embedding Space.</em></p>
+          <p class="edu-supervisor">Supervisor: Dr. Shah Muhammad Hamdi.</p>
         </article>
         <article class="edu-card reveal">
           <time>Aug 2017 – Aug 2021</time>
           <h3>BSc in Computer Engineering</h3>
           <p>University of Zanjan · GPA 3.88/4.00 (last two years)</p>
-          <p>Car Dealership Web Application using Django and React with a dynamic reputation-weighted pricing algorithm.</p>
+          <p class="edu-detail"><strong>Project:</strong><br />Car Dealership Web Application using Django and React with a dynamic reputation-weighted pricing algorithm.</p>
         </article>
       </div>
     </section>
@@ -324,22 +295,6 @@
         <li class="reveal"><span class="pub-year">2026</span><div><h3>A Comprehensive Survey of Data Augmentation Techniques for Space-Weather Time Series</h3><p>M. EskandariNasab, et al. <em>The Astrophysical Journal Supplement Series</em>. In submission, September 2026.</p></div></li>
       </ol>
       <button class="show-more" type="button" data-show-more>Show all publications</button>
-
-      <div class="dataset-row reveal">
-        <h3>Datasets &amp; notebooks</h3>
-        <div class="dataset-cards">
-          <a class="dataset-card" href="https://doi.org/10.5281/zenodo.11566472" target="_blank" rel="noreferrer">
-            <span class="dataset-tag">Dataset</span>
-            <h4>Cleaned SWAN-SF Dataset (v1.0.0)</h4>
-            <p>Zenodo, 2024 · DOI 10.5281/zenodo.11566472</p>
-          </a>
-          <a class="dataset-card" href="https://doi.org/10.5281/zenodo.11564789" target="_blank" rel="noreferrer">
-            <span class="dataset-tag">Notebook</span>
-            <h4>SWAN-SF Preprocessing &amp; Sampling Notebooks (v1.0.0)</h4>
-            <p>Zenodo, 2024 · DOI 10.5281/zenodo.11564789</p>
-          </a>
-        </div>
-      </div>
     </section>
 
     <!-- ============ RECOGNITION (tabs: awards / talks / service) ============ -->
@@ -422,6 +377,20 @@
       </div>
     </section>
 
+    <!-- ============ NEWS ============ -->
+    <section id="news" class="section news-section">
+      <p class="eyebrow reveal">Latest</p>
+      <h2 class="reveal">News</h2>
+      <div class="compact-list news-grid">
+        <article class="reveal"><time>2026</time><p>SoftwareX journal article on FlaPLeT published.</p></article>
+        <article class="reveal"><time>Nov 2025</time><p>Received IEEE ICDM Conference Travel Award; volunteered at IEEE ICDM 2025.</p></article>
+        <article class="reveal"><time>Jul 2025</time><p>Contributed to NSF Award #2530946 (CAIG Project) via the proposed UNISON model.</p></article>
+        <article class="reveal"><time>May 2025</time><p>Received SIAM SDM 2025 Student Travel Award; presented AVATAR.</p></article>
+        <article class="reveal"><time>Mar 2025</time><p>Completed PhD qualifying examination at Utah State University.</p></article>
+        <article class="reveal"><time>Dec 2024</time><p>Completed MSc in Computer Science; presented at IEEE BigData &amp; IEEE ICMLA.</p></article>
+      </div>
+    </section>
+
     <!-- ============ GALLERY ============ -->
     <section id="gallery" class="section gallery-section">
       <p class="eyebrow reveal">Academic moments</p>
@@ -440,7 +409,7 @@
           <figure><img src="gallery/sam_eskandarinasab_interview.jpg" alt="MohammadReza EskandariNasab (Sam EskandariNasab) during an academic interview" loading="lazy" /><figcaption>Academic interview</figcaption></figure>
         </div>
       </div>
-      <div class="gallery-hint">Keep scrolling →</div>
+      <div class="gallery-hint">Scroll left or right to browse →</div>
     </section>
 
     <!-- ============ CONTACT ============ -->
@@ -483,6 +452,6 @@
   </script>
   <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script type="module" src="index.js?v=2"></script>
+  <script type="module" src="index.js?v=4"></script>
 </body>
 </html>
