@@ -368,6 +368,13 @@ a.nav-cta{
 .pub-list li[data-hidden]{ display:none; }
 .pub-year{ font-family: var(--font-display); font-weight:700; color: var(--coral); font-size: var(--text-title); }
 .pub-list h3{ font-size: var(--text-title); line-height:1.4; margin-bottom: var(--sp-2); }
+.pub-list h3 a{
+  background-image: linear-gradient(var(--coral), var(--coral));
+  background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px;
+  transition: background-size var(--dur-med) var(--ease-out), color var(--dur-fast) ease;
+}
+.pub-list h3 a:hover{ color: var(--sky-deep); background-size: 100% 1.5px; }
+.pub-list h3 a:focus-visible{ outline:2px solid var(--sky-deep); outline-offset:3px; border-radius:2px; }
 .pub-list p{ font-size: var(--text-base); color: var(--ink-soft); }
 .pub-list em{ color: var(--ink); font-style:italic; }
 
@@ -462,7 +469,9 @@ a.nav-cta{
   .compact-list.news-grid{ grid-template-columns:1fr; }
 }
 
-@media (max-width: 720px){
+/* Drawer nav. The inline bar needs ~815px to seat the brand, 5 links and the
+   CTA pill without crowding, so it hands off to the drawer before that. */
+@media (max-width: 860px){
   .nav-links{
     position:fixed; top: var(--nav-h); left:0; right:0; height: calc(100dvh - var(--nav-h));
     background: rgba(246,251,255,0.98); backdrop-filter: blur(20px);
@@ -472,6 +481,9 @@ a.nav-cta{
   .nav-links.is-open{ transform: translateX(0); }
   .nav-toggle{ display:flex; }
   .nav-cta{ margin-top: var(--sp-2); }
+}
+
+@media (max-width: 720px){
   .pub-list li{ grid-template-columns:1fr; }
 }
 
