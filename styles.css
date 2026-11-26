@@ -1,0 +1,305 @@
+/* =====================================================================
+   DESIGN SYSTEM
+   Every size on this page comes from the tokens below. No raw px values
+   appear in component rules, so nothing can drift off-scale.
+
+   UNIT   Tokens are in rem, so the whole system scales as one unit.
+          The root size steps up on large screens, keeping every
+          proportion intact (values below are at the 16px base):
+            < 1440px   16px root   container 1120px
+            >= 1440px  18px root   container 1260px
+            >= 1800px  20px root   container 1400px
+
+   TYPE   8 steps, 2 families. Headings are STEPPED, not fluid, so every
+          rendered size is a token at every screen width:
+                      desktop   tablet<=960   phone<=560
+            hero        52          38.4          28
+            section     48          32            24
+          Hero steps are the largest sizes at which the full surname
+          "ESKANDARINASAB." fits on one line at every width in the tier,
+          while staying above the section titles.
+     xs 12  labels, dates, chips, captions
+     sm 14  card body, list body, buttons
+     base 16  prose, list titles, brand
+     md 20  card titles, contact emails
+   SPACE  8-point grid: 4 8 12 16 24 32 48 64 96
+   LINE   3px everywhere (kept in px so borders stay crisp). Radius 0.
+   SHADOW pop-sm 4px for list items and controls, pop 8px for cards
+   IMAGE  portrait at the photo's own ratio (never cropped), 288px wide;
+          gallery 3:4 (the photos' own ratio, never cropped); logo 32px
+   COLOR  white cards on paper; accents only on small elements,
+          plus one feature block per section
+   ===================================================================== */
+:root{
+  /* color */
+  --ink:#111111;
+  --paper:#FFFDF5;
+  --white:#FFFFFF;
+  --yellow:#FFE14D;
+  --pink:#FF8FB1;
+  --cyan:#7CE0E6;
+  --lime:#C6F76B;
+  --violet:#C3B4FF;
+
+  /* type */
+  --display:"Archivo Black", system-ui, sans-serif;
+  --body:"Space Grotesk", system-ui, sans-serif;
+  --fs-xs:.75rem;     /* 12 */
+  --fs-sm:.875rem;    /* 14 */
+  --fs-base:1rem;     /* 16 */
+  --fs-md:1.25rem;    /* 20 */
+  --fs-lg:1.5rem;     /* 24 */
+  --fs-xl:2rem;       /* 32 */
+  --fs-2xl:3rem;      /* 48 */
+  --fs-hero-lg:3.25rem;/* 52 */
+  --fs-hero-md:2.4rem;/* 38.4 */
+  --fs-hero-sm:1.75rem;/* 28 */
+  --lh-tight:1;
+  --lh-snug:1.25;
+  --lh-body:1.6;
+  --track:.08em;
+
+  /* space */
+  --s-1:.25rem;       /* 4 */
+  --s-2:.5rem;        /* 8 */
+  --s-3:.75rem;       /* 12 */
+  --s-4:1rem;         /* 16 */
+  --s-5:1.5rem;       /* 24 */
+  --s-6:2rem;         /* 32 */
+  --s-7:3rem;         /* 48 */
+  --s-8:4rem;         /* 64 */
+  --s-9:6rem;         /* 96 */
+
+  /* structure */
+  --bw:3px;
+  --bd:var(--bw) solid var(--ink);
+  --pop-sm:4px 4px 0 var(--ink);
+  --pop:8px 8px 0 var(--ink);
+  --lift:translate(-2px, -2px);
+
+  /* layout */
+  --container:70rem;  /* 1120 */
+  --gutter:var(--s-5);
+  --section-y:var(--s-9);
+  --nav-h:4rem;       /* 64 */
+  --measure:62ch;
+
+  /* image */
+  --logo:2rem;        /* 32 */
+  --stamp-w:5rem;     /* 80 */
+  --gallery-w:17.5rem;/* 280 */
+  --portrait-w:18rem; /* 288 */
+  --portrait-ratio:1124 / 2142; /* the source photo's own shape */
+}
+
+/* Large screens: the root unit steps up and everything scales together. */
+@media (min-width:1440px){ html{ font-size:112.5%; } }
+@media (min-width:1800px){ html{ font-size:125%; } }
+
+/* ---------- base ---------- */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; scroll-padding-top:var(--nav-h); }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:var(--fs-base); line-height:var(--lh-body);
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+ul,ol{ margin:0; padding:0; list-style:none; }
+h1,h2,h3{ margin:0; font-family:var(--display); font-weight:400; }
+p{ margin:0; }
+em{ font-style:italic; }
+
+.wrap{ max-width:var(--container); margin:0 auto; padding:0 var(--gutter); }
+
+/* ---------- type roles ---------- */
+.kicker{
+  display:inline-block; background:var(--ink); color:var(--paper);
+  font-size:var(--fs-xs); font-weight:700; text-transform:uppercase; letter-spacing:var(--track);
+  line-height:var(--lh-snug); padding:var(--s-1) var(--s-2); margin-bottom:var(--s-4);
+}
+.title-section{
+  font-size:var(--fs-2xl); line-height:var(--lh-tight);
+  text-transform:uppercase; margin-bottom:var(--s-6);
+}
+.title-card{ font-size:var(--fs-md); line-height:var(--lh-snug); margin-bottom:var(--s-2); }
+.title-item{ font-family:var(--body); font-weight:700; font-size:var(--fs-base); line-height:var(--lh-snug); margin-bottom:var(--s-2); }
+.meta{
+  font-size:var(--fs-xs); font-weight:700; text-transform:uppercase; letter-spacing:var(--track);
+  line-height:var(--lh-snug); margin-bottom:var(--s-2);
+}
+.org{ font-size:var(--fs-sm); font-weight:700; margin-bottom:var(--s-4); }
+.text-sm{ font-size:var(--fs-sm); }
+.prose p{ max-width:var(--measure); margin-bottom:var(--s-4); }
+.prose p:last-child{ margin-bottom:0; }
+
+/* ---------- controls ---------- */
+.btn{
+  display:inline-block; text-decoration:none; background:var(--white);
+  font-size:var(--fs-sm); font-weight:700; text-transform:uppercase; letter-spacing:var(--track);
+  line-height:var(--lh-snug); padding:var(--s-3) var(--s-5);
+  border:var(--bd); box-shadow:var(--pop-sm); transition:transform .12s, box-shadow .12s;
+}
+.btn:hover{ transform:var(--lift); box-shadow:var(--pop); }
+.btn-primary{ background:var(--ink); color:var(--paper); }
+
+.chip{
+  display:inline-block; text-decoration:none; background:var(--white); cursor:pointer;
+  font-family:var(--body); font-size:var(--fs-xs); font-weight:700; text-transform:uppercase; letter-spacing:var(--track);
+  line-height:var(--lh-snug); padding:var(--s-2) var(--s-3); border:var(--bd); color:var(--ink);
+}
+.chip:hover{ background:var(--yellow); }
+.chip.is-active, .chip-dark{ background:var(--ink); color:var(--paper); }
+.chip-dark:hover{ background:var(--pink); color:var(--ink); }
+.chip-violet{ background:var(--violet); }
+
+.row{ display:flex; flex-wrap:wrap; gap:var(--s-2); }
+
+/* ---------- surfaces ---------- */
+.card{ background:var(--white); border:var(--bd); box-shadow:var(--pop); padding:var(--s-5); }
+.item{ background:var(--white); border:var(--bd); box-shadow:var(--pop-sm); padding:var(--s-4) var(--s-5); }
+.feature-yellow{ background:var(--yellow); }
+.feature-cyan{ background:var(--cyan); }
+
+.grid-2{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--s-5); }
+.grid-3{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:var(--s-5); }
+.stack{ display:flex; flex-direction:column; gap:var(--s-4); }
+
+.bullets li{ position:relative; padding-left:var(--s-4); margin-bottom:var(--s-2); font-size:var(--fs-sm); }
+.bullets li:last-child{ margin-bottom:0; }
+.bullets li::before{ content:""; position:absolute; left:0; top:.6em; width:var(--s-2); height:var(--s-2); background:var(--ink); }
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky; top:0; z-index:50; height:var(--nav-h);
+  background:var(--yellow); border-bottom:var(--bd);
+}
+.nav .wrap{ height:100%; display:flex; align-items:center; justify-content:space-between; gap:var(--s-4); }
+.brand{
+  display:flex; align-items:center; gap:var(--s-3); text-decoration:none;
+  font-family:var(--display); font-size:var(--fs-base); text-transform:uppercase;
+}
+.brand img{ width:var(--logo); height:var(--logo); } /* the SE mark carries its own border + shadow */
+
+/* ---------- sections ---------- */
+.section{ padding:var(--section-y) 0; border-top:var(--bd); }
+
+/* hero */
+.hero{ padding:var(--s-8) 0 var(--section-y); }
+.hero-grid{ display:grid; grid-template-columns:minmax(0,1fr) var(--portrait-w); gap:var(--s-7); align-items:start; }
+.tag{ background:var(--lime); box-shadow:var(--pop-sm); margin-bottom:var(--s-5); }
+.hero-title{
+  font-size:var(--fs-hero-lg); line-height:var(--lh-tight); hyphens:manual;
+  text-transform:uppercase; margin-bottom:var(--s-5);
+}
+.hl{ display:inline-block; background:var(--pink); border:var(--bd); padding:0 var(--s-2); }
+.hero .prose{ margin-bottom:var(--s-6); }
+.hero .actions{ display:flex; flex-wrap:wrap; gap:var(--s-4); margin-bottom:var(--s-5); }
+.portrait{
+  justify-self:end; width:100%; max-width:var(--portrait-w); aspect-ratio:var(--portrait-ratio);
+  background:var(--cyan); border:var(--bd); box-shadow:var(--pop); overflow:hidden;
+}
+.portrait img{ width:100%; height:100%; object-fit:contain; }
+
+/* about */
+.about-grid{ display:grid; grid-template-columns:7fr 5fr; gap:var(--s-7); align-items:start; }
+
+/* publications */
+.pub{ display:grid; grid-template-columns:var(--stamp-w) minmax(0,1fr); gap:var(--s-4); align-items:start; }
+.stamp{
+  font-family:var(--display); font-size:var(--fs-base); line-height:var(--lh-snug); text-align:center;
+  background:var(--yellow); border:var(--bd); padding:var(--s-1) 0;
+}
+.stamp-muted{ background:var(--white); }
+.pub a{ text-decoration:none; border-bottom:var(--bw) solid var(--pink); }
+.pub a:hover{ background:var(--pink); }
+
+/* tabs */
+.tabs{ margin-bottom:var(--s-5); }
+.panel{ display:none; }
+.panel.is-active{ display:block; }
+
+/* gallery */
+.intro{ max-width:var(--measure); margin-bottom:var(--s-6); }
+.strip{ display:flex; gap:var(--s-5); overflow-x:auto; padding:0 var(--s-2) var(--s-4) 0; scrollbar-width:none; }
+.strip::-webkit-scrollbar{ display:none; }
+.shot{ flex:0 0 auto; width:var(--gallery-w); margin:0; background:var(--white); border:var(--bd); box-shadow:var(--pop-sm); }
+.shot img{ width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; border-bottom:var(--bd); }
+.shot figcaption{
+  font-size:var(--fs-xs); font-weight:700; text-transform:uppercase; letter-spacing:var(--track);
+  line-height:var(--lh-snug); padding:var(--s-3) var(--s-4);
+}
+
+/* contact */
+.contact{ background:var(--pink); }
+.contact .prose{ margin-bottom:var(--s-6); }
+.mails{ display:flex; flex-wrap:wrap; gap:var(--s-4); margin-bottom:var(--s-6); }
+.mail{
+  text-decoration:none; font-family:var(--display); font-size:var(--fs-md); line-height:var(--lh-snug);
+  background:var(--white); border:var(--bd); box-shadow:var(--pop-sm); padding:var(--s-3) var(--s-5);
+  transition:transform .12s, box-shadow .12s;
+}
+.mail:hover{ transform:var(--lift); box-shadow:var(--pop); background:var(--yellow); }
+
+/* footer */
+.foot{ background:var(--ink); color:var(--paper); border-top:var(--bd); padding:var(--s-5) 0; }
+.foot .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--s-4); font-size:var(--fs-sm); font-weight:700; }
+.foot a{ color:var(--yellow); }
+
+/* ---------- responsive: only tokens change ---------- */
+@media (max-width:960px){
+  :root{ --section-y:var(--s-8); --gutter:var(--s-4); }
+  .hero-title{ font-size:var(--fs-hero-md); }
+  .title-section{ font-size:var(--fs-xl); }
+  .hero-grid, .about-grid, .grid-2, .grid-3{ grid-template-columns:minmax(0,1fr); }
+  .portrait{ justify-self:start; }
+}
+@media (max-width:560px){
+  .hero-title{ font-size:var(--fs-hero-sm); }
+  .title-section{ font-size:var(--fs-lg); }
+  .mail{ font-size:var(--fs-base); }
+  .pub{ grid-template-columns:minmax(0,1fr); gap:var(--s-2); }
+  .stamp{ width:var(--stamp-w); }
+}
+@media (prefers-reduced-motion:reduce){
+  *{ transition:none !important; scroll-behavior:auto !important; }
+}
+
+/* =====================================================================
+   ASTRA LAB PAGE
+   Same tokens, same components. Only the pieces the lab page needs.
+   ===================================================================== */
+.lead{
+  max-width:var(--measure); font-size:var(--fs-md); font-weight:700; line-height:var(--lh-snug);
+  margin-bottom:var(--s-4);
+}
+/* The logo SVG draws its own tile, border and hard shadow, so the panel is just a sized slot. */
+.logo-panel{ justify-self:end; width:100%; max-width:var(--portrait-w); aspect-ratio:1/1; }
+.logo-panel img{ width:100%; height:100%; object-fit:contain; }
+
+.group{ margin-bottom:var(--s-7); }
+.group:last-child{ margin-bottom:0; }
+.subhead{
+  font-size:var(--fs-sm); font-weight:700; text-transform:uppercase; letter-spacing:var(--track);
+  line-height:var(--lh-snug); margin-bottom:var(--s-4);
+}
+.person{ padding:0; overflow:hidden; }
+.person img{ width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; border-bottom:var(--bd); }
+.person-body{ padding:var(--s-4) var(--s-5); }
+.slot{
+  display:flex; align-items:center; justify-content:center; aspect-ratio:3/4;
+  background:var(--violet); border-bottom:var(--bd);
+  font-family:var(--display); font-size:var(--fs-2xl); line-height:var(--lh-tight);
+}
+.empty{ text-align:center; font-size:var(--fs-sm); font-weight:700; padding:var(--s-7) var(--s-5); }
+
+@media (max-width:960px){
+  .logo-panel{ justify-self:start; }
+}
+/* Nav: one row needs ~970px (main) and ~1060px (lab, 7 links) including the
+   scrollbar, so below 1080px every nav switches to the wrapping layout. */
+@media (max-width:1080px){
+  .nav{ height:auto; }
+  .nav .wrap{ flex-wrap:wrap; padding-top:var(--s-3); padding-bottom:var(--s-3); }
+}
