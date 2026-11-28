@@ -4,11 +4,13 @@
    appear in component rules, so nothing can drift off-scale.
 
    UNIT   Tokens are in rem, so the whole system scales as one unit.
-          The root size steps up on large screens, keeping every
-          proportion intact (values below are at the 16px base):
-            < 1440px   16px root   container 1120px
-            >= 1440px  18px root   container 1260px
-            >= 1800px  20px root   container 1400px
+          The root size is set per screen tier, keeping every
+          proportion intact (values below are at the 16px base).
+          Desktop tiers run at 0.9x so the site reads a little denser:
+            <= 960px     16px root     container (full width)
+            961-1439px   14.4px root   container 1008px
+            1440-1799px  16.2px root   container 1134px
+            >= 1800px    18px root     container 1260px
 
    TYPE   8 steps, 2 families. Headings are STEPPED, not fluid, so every
           rendered size is a token at every screen width:
@@ -92,9 +94,11 @@
   --portrait-ratio:1124 / 2142; /* the source photo's own shape */
 }
 
-/* Large screens: the root unit steps up and everything scales together. */
-@media (min-width:1440px){ html{ font-size:112.5%; } }
-@media (min-width:1800px){ html{ font-size:125%; } }
+/* Root unit per tier; everything in the system scales with it. Phones and
+   tablets keep 100% so body text stays at the 16px reading minimum. */
+@media (min-width:961px){  html{ font-size:90%; } }      /* 14.4px */
+@media (min-width:1440px){ html{ font-size:101.25%; } }  /* 16.2px */
+@media (min-width:1800px){ html{ font-size:112.5%; } }   /* 18px   */
 
 /* ---------- base ---------- */
 *,*::before,*::after{ box-sizing:border-box; }
