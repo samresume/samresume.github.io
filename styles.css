@@ -6,11 +6,11 @@
    UNIT   Tokens are in rem, so the whole system scales as one unit.
           The root size is set per screen tier, keeping every
           proportion intact (values below are at the 16px base).
-          Desktop tiers run at 0.9x so the site reads a little denser:
+          Desktop tiers run at 0.81x so the site reads denser:
             <= 960px     16px root     container (full width)
-            961-1439px   14.4px root   container 1008px
-            1440-1799px  16.2px root   container 1134px
-            >= 1800px    18px root     container 1260px
+            961-1439px   12.96px root  container 907px
+            1440-1799px  14.58px root  container 1021px
+            >= 1800px    16.2px root   container 1134px
 
    TYPE   8 steps, 2 families. Headings are STEPPED, not fluid, so every
           rendered size is a token at every screen width:
@@ -96,9 +96,9 @@
 
 /* Root unit per tier; everything in the system scales with it. Phones and
    tablets keep 100% so body text stays at the 16px reading minimum. */
-@media (min-width:961px){  html{ font-size:90%; } }      /* 14.4px */
-@media (min-width:1440px){ html{ font-size:101.25%; } }  /* 16.2px */
-@media (min-width:1800px){ html{ font-size:112.5%; } }   /* 18px   */
+@media (min-width:961px){  html{ font-size:81%; } }      /* 12.96px */
+@media (min-width:1440px){ html{ font-size:91.125%; } }  /* 14.58px */
+@media (min-width:1800px){ html{ font-size:101.25%; } }  /* 16.2px  */
 
 /* ---------- base ---------- */
 *,*::before,*::after{ box-sizing:border-box; }
